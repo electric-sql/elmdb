@@ -1,2 +1,5 @@
 #!/bin/bash
+make -C c_src
+mv ./priv/app.so ./priv/elmdb.so
+mix compile.erlang
 mix run -e "Perf.run()"

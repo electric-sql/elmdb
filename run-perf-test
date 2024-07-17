@@ -1,0 +1,9 @@
+#!/bin/bash
+docker build . -t elmdb
+
+docker run \
+  --name elmdb-perf \
+  --volume `pwd`:/app \
+  elmdb
+
+docker rm elmdb-perf
